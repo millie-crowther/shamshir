@@ -11,3 +11,7 @@ WORKDIR /h2o/build
 RUN cmake ..
 RUN make
 RUN make install
+WORKDIR /
+COPY h2o.yaml /h2o.yaml
+
+ENTRYPOINT [ "h2o", "-m", "master", "-c", "/h2o.yaml" ]

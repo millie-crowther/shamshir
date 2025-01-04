@@ -1,0 +1,9 @@
+hosts:
+  localhost:
+    listen:
+      port: 80
+    paths:
+      "/health":
+        file.file: /h2o.yaml
+         
+        
